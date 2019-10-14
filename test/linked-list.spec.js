@@ -132,7 +132,6 @@ describe('LinkedList', () => {
             list.append(3);
             list.append(4);
             list.append(5);
-            // console.log(list)
 
             list.deleteAt(2);
 
@@ -185,7 +184,7 @@ describe('LinkedList', () => {
             const list = new LinkedList();
 
             function fn() {
-                list.append(4).reverse().deleteAt(0)
+                list.append(4).reverse().deleteAt(0).clear().insertAt(0, 3);
             }
 
             expect(fn).to.not.throw();

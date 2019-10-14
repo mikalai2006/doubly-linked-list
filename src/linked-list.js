@@ -52,11 +52,13 @@ class LinkedList {
         let currentEl = this._head,
             count = 1;
         
-        // if (this.length === 0 || index < 0 || index > this.length){
-            // throw new Error('big index');
-        // }
+        /*
+        if (this.length === 0 || index < 0 || index > this.length){
+            throw new Error('big index');
+        }
+        */
         // console.log('count===>)', count, ' index-> ', index)
-        while (currentEl.next) {
+        while (currentEl) {
             currentEl = currentEl.next || null;
             
             if (count === index) {
@@ -84,6 +86,7 @@ class LinkedList {
         this.length = 0;
         this._tail = null;
         this._head = null;
+        return this;
     }
 
     deleteAt(index) {
